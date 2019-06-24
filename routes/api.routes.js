@@ -20,9 +20,9 @@ router.post("/articles", (req, res) => {
   /* 
         Vérifier la présence du title et du content dans la req
         */
-  if (req.body && req.body.title.length > 0 && req.body.content.length > 0) {
+  if (req.body && req.body.name && req.body.content) {
     //Définition de l'item
-    const item = { title: req.body.title, content: req.body.content, url: req.body.url };
+    const item = { name: req.body.name, content: req.body.content, img: req.body.img, id: req.body.id };
     client
       .db(dbName)
       .collection("article")
