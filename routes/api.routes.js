@@ -104,11 +104,11 @@ router.put("/articles/:id", (req, res) => {
   }
 });
 // CRUD : Delete
-router.delete("/articles/:id", (req, res) => {
+router.delete("/articles", (req, res) => {
   client
     .db(dbName)
     .collection("article")
-    .findOneAndDelete({ _id: ObjectID(req.params.id) }, (err, results) => {
+    .findOneAndDelete({ id: req.body.id }, (err, results) => {
       // Tester la commande MongoDb
       if (err) {
         res.send(err);
