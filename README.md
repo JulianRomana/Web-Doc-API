@@ -13,4 +13,6 @@ Créer un fichier .env avec 3 variables :
 PORT = 7892
 MONGO_USER=admin
 MONGO_PSWD=admin
+
+npm run dev
 ```
