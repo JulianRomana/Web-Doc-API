@@ -8,7 +8,7 @@ Cette api récupère les données d'une database en ligne ( mongoDB Atlas ).
 
 ```
 npm i
-Créer un fichier .env avec 3 variables :
+Créer un fichier .env à la racine avec 3 variables :
 
 PORT = 7892
 MONGO_USER=admin
